@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: none;
+}
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 160vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/bg1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.section1{
+    padding: 40px 80px;
+}
+
+.section2 {
+    margin: 40px 0;
+}
+
+/* Bouton */
+.btn {
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    color: #000;
+    background-color: #fff;
+    transition: 0.3s;
+    text-align: center;
+    font-weight: 600;
+}
+
+.btn:hover{
+    color: #fff;
+    background-color: #00ddff;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(37, 117, 255);
+    padding: 20px;
+    box-shadow: 0 3px 20px ;
+    box-shadow: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar li{
+    padding: 0 20px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#navbar li:hover{
+    transform: scale(1.2);
+}
+
+#navbar li a {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#header img{
+    width: 60px;
+    border-radius: 50px;
+}
+
+#header .acceuil {
+    font-size: 20px;
+}
+
+
+/*Page de garde */
+
+#acceuil{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    
+}
+
+#acceuil h2 {
+    font-size: 40px;
+    padding-bottom: 20px;
+    color: #ffffff;
+}
+
+#acceuil h1 {
+    color: #ffffff;
+    font-size: 40px;
+}
+
+#scroll1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#scroll1 h1{
+    color: #fff;
+    margin-bottom: 80px;
+    font-size: 2rem;
+}
+  
+#scroll1 form {
+display: flex;
+flex-direction: column;
+}
+
+label {
+margin: 10px 0 5px 0;
+color: #fff;
+font-size: 1.2rem;
+}
+
+input {
+margin-bottom: 20px;
+width: 300px;
+border-radius: 20px;
+height: 30px;
+text-align: center;
+}
+
+button {
+margin-top: 10px; /* Ajoute de l'espace au-dessus du bouton */
+}
+
+
+
+/*Page 2*/
+
+.wrapper{
+    width: 95%;
+    margin: O auto;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+#search-container{
+    margin: 1em 0;
+}
+
+#search-container input {
+    background-color: #f1f1f1;
+    width: 40%;
+    border: 2px solid #fff;
+    padding: 1em 0.3em;
+}
+
+
+#search-container button {
+    padding: 1em 2em;
+    margin-left: 1em;
+    background-color: #db6930;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 0.5em;
+}
+
+.button-value {
+    color: #1a1a1a;
+    border: 2px solid #db6930;
+    border-radius: 3em;
+    padding: 1em 2.2em;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+#buttons input {
+    color: #1a1a1a;
+    border: 2px solid #db6930;
+    border-radius: 3em;
+    padding: 1em 2.2em;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.active{
+    background-color: #db6930;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+

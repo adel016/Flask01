@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='organisme.css') }}">
+{% endblock %}
+
+{% block body %}
+<section id="header">
+    <a href="#"><img src="/static/img/logo.png"></a>
+    <div>
+        <ul id="navbar">
+          <li><a href="{{ url_for('index') }}" class="acceuil">Accueil</a></li>
+          <li><a href="{{ url_for('comparaison') }}">Comparaison</a></li>
+          <li><a href="{{ url_for('about') }}">À propos</a></li>
+          <li><a href="{{ url_for('actus') }}">Actus</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="acceuil">
+    <h1>Liste des Organismes</h1>
+    <table border="1">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nom de l'organisme</th>
+            <!-- Ajoutez d'autres en-têtes de colonne si nécessaire -->
+          </tr>
+        </thead>
+        <tbody>
+          {% for organisme in organismes %}
+          <tr>
+            <td>{{ organisme['Id_Orga'] }}</td>
+            <td>
+              <a href="{{ url_for('handle_organisme', id_orga=organisme['Id_Orga']) }}">
+                {{ organisme['nom_orga'] }}
+              </a>
+            </td>
+            <!-- Ajoutez d'autres colonnes si nécessaire -->
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+</section>
+<!--
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID Site</th>
+            <th>Date Début</th>
+            <th>Date Fin</th>
+            <th>Valeur Brute</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for mesure in mesures %}
+        <tr>
+            <td>{{ mesure['Id_site'] }}</td>
+            <td>{{ mesure['Date_Deb'] }}</td>
+            <td>{{ mesure['Date_fin'] }}</td>
+            <td>{{ mesure['valeur_brute'] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+-->
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='comparaison.css') }}">
+{% endblock %}
+
+{% block body %}
+<section id="header">
+    <a href="#"><img src="/static/img/logo.png"></a>
+    <div>
+        <ul id="navbar">
+            <li><a href="{{ url_for('index') }}" class="acceuil">Accueil</a></li>
+            <li><a href="{{ url_for('comparaison') }}">Comparaison</a></li>
+            <li><a href="{{ url_for('about') }}">À propos</a></li>
+            <li><a href="{{ url_for('actus') }}">Contact</a></li>
+        </ul>
+    </div>
+</section>
+
+
+<section id="acceuil">
+    <div class="form-container">
+        <form action="/votre_route_de_traitement" method="post">
+          <div class="form-group">
+            <label for="start-date">Date de début:</label>
+            <input type="date" id="start-date" name="start_date" required>
+          </div>
+          <div class="form-group">
+            <label for="end-date">Date de fin:</label>
+            <input type="date" id="end-date" name="end_date" required>
+          </div>
+          <div class="form-group">
+            <label for="pollutant">Sélectionnez un polluant:</label>
+            <select id="pollutant" name="pollutant" required>
+              <option value="">--Choisissez un polluant--</option>
+              <option value="NO">NO</option>
+              <option value="NO2">NO2</option>
+              <option value="O3">O3</option>
+              <option value="NOx">NOx</option>
+              <option value="PM10">PM10</option>
+              <option value="PM2.5">PM2.5</option>
+              <option value="C6H6">C6H6</option>
+              <option value="SO2">SO2</option>
+              <option value="CO">CO</option>
+            </select>
+          </div>
+          <input type="submit" value="Soumettre">
+        </form>
+      </div>
+      
+</section>
+{% endblock %}

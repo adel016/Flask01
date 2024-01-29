@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='zas.css') }}">
+
+{% endblock %}
+
+{% block body %}
+<section id="header">
+    <a href="#"><img src="/static/img/logo.png"></a>
+    <div>
+        <ul id="navbar">
+            <li><a href="{{ url_for('index') }}" class="acceuil">Accueil</a></li>
+            <li><a href="{{ url_for('comparaison') }}">Comparaison</a></li>
+            <li><a href="{{ url_for('about') }}">À propos</a></li>
+            <li><a href="{{ url_for('actus') }}">Actus</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="acceuil">
+    <h1>Informations de l'Organisme</h1>
+    <p>ID : {{ organisme.Id_Orga }}</p>
+    <p>Nom : {{ organisme.nom_orga }}</p>
+
+    
+
+    <h2>Zones Associées</h2>
+    
+    <table class="centered-table">
+        <thead>
+        <tr>
+            <th>ID Zas</th>
+            <th>Nom Zas</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for zas in zas %}
+            <tr>
+            <td><a href="{{ url_for('handle_zas', id_zas=zas.Id_Zas) }}">{{ zas.Id_Zas }}</a></td>
+            <td><a href="{{ url_for('handle_zas', id_zas=zas.Id_Zas) }}">{{ zas.Nom_zas }}</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <img src="/version1/python/static/img/mapfr.png" alt="">
+</section>
+{% endblock %}

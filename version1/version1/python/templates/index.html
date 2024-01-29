@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+{% endblock %}
+
+{% block body %}
+<section id="header">
+    <a href="#"><img src="/static/img/logo.png"></a>
+    <div>
+        <ul id="navbar">
+            <li><a href="{{ url_for('index') }}" class="acceuil">Accueil</a></li>
+            <li><a href="{{ url_for('comparaison') }}">Comparaison</a></li>
+            <li><a href="{{ url_for('about') }}">À propos</a></li>
+            <li><a href="{{ url_for('actus') }}">Actus</a></li>
+        </ul>
+    </div>
+</section>
+
+
+    <section id="acceuil">
+        <h2 class="section1">Ensemble,</h2>
+        <h1 class="section1">Agissons pour la France</h1>
+    </section>
+
+    <section id="scroll1">
+        <h1>Informez vous sur la qualtié de l'air en temps réel</h1>
+        <form action="/" method="post">
+            <label for="mois">Mois (Month):</label>
+            <input type="number" id="mois" name="mois" required>
+            <label for="jour">Jour (Day):</label>
+            <input type="number" id="jour" name="jour" required>
+            <label for="jour">Année (year): [2021 - 2023]</label>
+            <input type="number" id="annee" name="annee" required>
+            <button type="submit" class="btn">Download</button>
+        </form>
+        {% if error %}
+            <script>
+            alert("{{ error }}");
+            </script>
+        {% endif %}
+    </section>
+{% endblock %}    

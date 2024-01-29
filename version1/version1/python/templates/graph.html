@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='graph.css') }}">
+
+{% endblock %}
+
+{% block body %}
+<section id="header">
+    <a href="#"><img src="/static/img/logo.png"></a>
+    <div>
+        <ul id="navbar">
+            <li><a href="{{ url_for('index') }}" class="acceuil">Accueil</a></li>
+            <li><a href="{{ url_for('comparaison') }}">Comparaison</a></li>
+            <li><a href="{{ url_for('about') }}">À propos</a></li>
+            <li><a href="{{ url_for('actus') }}">Actus</a></li>
+        </ul>
+    </div>
+</section>
+<section id="acceuil">
+    <!-- graph.html -->
+<img id="a" src="{{ url_for('static', filename='graphique_polluants.png') }}" alt="Graphique des Polluants">
+<img id="b" src="{{ url_for('static', filename='graphique.png') }}" alt="Graphique des Polluants"> 
+
+</section>
+{% endblock %}

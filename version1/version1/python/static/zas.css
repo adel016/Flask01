@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: none;
+}
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 110vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/bg2.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.section1{
+    padding: 40px 80px;
+}
+
+.section2 {
+    margin: 40px 0;
+}
+
+/* Bouton */
+.btn {
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    color: #000;
+    background-color: #fff;
+    transition: 0.3s;
+    text-align: center;
+    font-weight: 600;
+}
+
+.btn:hover{
+    color: #fff;
+    background-color: #00ddff;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(37, 117, 255);
+    padding: 20px;
+    box-shadow: 0 3px 20px ;
+    box-shadow: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar li{
+    padding: 0 20px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#navbar li:hover{
+    transform: scale(1.2);
+}
+
+#navbar li a {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#header img{
+    width: 60px;
+    border-radius: 50px;
+}
+
+#header .acceuil {
+    font-size: 20px;
+}
+
+
+/*Page de garde */
+
+#acceuil{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    
+}
+
+/* Affichage des Zas */
+
+#acceuil h1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    font-size: 2rem;
+}
+
+#acceuil p{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    
+}
+
+#acceuil h2{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    margin-top: 40px;
+    font-size: 2rem;
+}
+
+.centered-table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; /* ou la largeur que vous préférez */
+    border-collapse: collapse;
+    background-color: #f2f2f2;
+  }
+
+  .centered-table td, .centered-table th {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
+
+  .centered-table th {
+    background-color: #f2f2f2;
+    color: black;
+  }

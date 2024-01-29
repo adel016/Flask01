@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='actus.css') }}">
+{% endblock %}
+
+{% block body %}
+<section id="header">
+    <a href="#"><img src="/static/img/logo.png"></a>
+    <div>
+        <ul id="navbar">
+            <li><a href="{{ url_for('index') }}" class="acceuil">Accueil</a></li>
+            <li><a href="{{ url_for('comparaison') }}">Comparaison</a></li>
+            <li><a href="{{ url_for('about') }}">À propos</a></li>
+            <li><a href="{{ url_for('actus') }}">Actus</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="acceuil">
+    <h1>Notre engagement</h1>
+    <div class="container-info">
+        <img src="{{ url_for('static', filename='img/mapfr.png') }}" alt="Graphique des Polluants">
+        <h2>La France s'engage activement dans la lutte contre la pollution, mettant en œuvre des politiques strictes de réduction des émissions et favorisant les énergies renouvelables. Ces efforts s'inscrivent dans le cadre de ses engagements internationaux pour la protection de l'environnement et la lutte contre le changement climatique.</h2>
+    </div>
+    
+
+</section>
+{% endblock %}

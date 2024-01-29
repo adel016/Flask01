@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='site.css') }}">
+{% endblock %}
+
+{% block body %}
+<section id="header">
+    <a href="#"><img src="/static/img/logo.png"></a>
+    <div>
+        <ul id="navbar">
+            <li><a href="{{ url_for('index') }}" class="acceuil">Accueil</a></li>
+            <li><a href="{{ url_for('comparaison') }}">Comparaison</a></li>
+            <li><a href="{{ url_for('about') }}">À propos</a></li>
+            <li><a href="{{ url_for('actus') }}">Actus</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="acceuil">
+    <h1>{{ zas['Nom_zas'] }}</h1>
+    <h2>Sites associés :</h2>
+    <div class="table-container">
+        <table class="centered-table">
+            <thead>
+                <tr>
+                    <th>ID Site</th>
+                    <th>Nom Site</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for site in sites %}
+                    <tr>
+                        <td><a href="{{ url_for('handle_site_mesures', id_site=site['Id_Site']) }}">{{ site['Id_Site'] }}</a></td>
+                        <td><a href="{{ url_for('handle_site_mesures', id_site=site['Id_Site']) }}">{{ site['Nom_site'] }}</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+{% endblock %}
